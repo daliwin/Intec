@@ -15,23 +15,12 @@
 		
 		
 		<script>
-			var album = {
-				name: '36 Chambers',
-				artist: 'wtc'
-			}
-			
-			function renderAlbum(album) {
-     // return DOM element
-			 var newElement = document.createElement('h2')
-			 var textNode = document.createTextNode('Heloo !!')
-			 newElement.appendChild(textNode)
+			var newElement = document.createElement('h2')
+			var textNode = document.createTextNode('Heloo !!')
+			newElement.appendChild(textNode)
 
-			 return newElement
-		   }
-
-		   var component = renderAlbum(album)
-		   document.getElementById('viewport').appendChild(component)
- 
+			var viewport = document.getElementById('viewport')
+			viewport.appendChild(newElement)
 		</script>
 	</body>
 </html>
