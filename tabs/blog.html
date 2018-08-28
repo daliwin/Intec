@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Document</title>
+</head>
+
+<body>
+ <div id="viewport"></div>
+ <script>
+   articles = [
+     { title: 'hello world', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a nisi mollis, suscipit dolor nec, laoreet leo. Phasellus bibendum magna risus, quis aliquet enim tincidunt ut. Pellentesque aliquam in ipsum sed finibus. Suspendisse vel sapien id arcu pulvinar pharetra. Etiam pellentesque mi eu orci venenatis, at placerat lectus tempor. Donec ut magna eget odio bibendum blandit sodales sit amet lorem. Aenean sit amet dignissim quam. Mauris pellentesque tellus sed felis porta, a consectetur nulla pulvinar. Donec egestas facilisis enim elementum suscipit. Suspendisse et maximus enim. Pellentesque nibh odio, malesuada sit amet placerat sed, tincidunt et turpis. Cras non ipsum sed justo vulputate ultrices sed et lectus. Duis auctor ac nisl vitae blandit. Cras egestas pretium diam at scelerisque. In at velit lobortis ligula fermentum facilisis ut sit amet lorem.' },
+     { title: 'hello world2', content: 'Duis at lacinia libero. Curabitur iaculis molestie ligula, nec tempor justo facilisis a. Integer fermentum, dolor sed hendrerit auctor, enim mauris lacinia augue, sit amet maximus nisl mauris in ligula. In non risus luctus magna porta volutpat. Morbi sagittis ante ac purus congue, posuere eleifend neque maximus. Maecenas neque eros, laoreet eget lacinia quis, lacinia sit amet eros. Phasellus imperdiet id ante non pharetra. Suspendisse vulputate tristique enim ac euismod. Nullam tellus tellus, mattis nec lectus id, varius mattis enim.' },
+     { title: 'hello world3', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut enim nunc. Curabitur tincidunt, turpis ac scelerisque sagittis, nunc nibh fringilla odio, sed blandit est mi vel dolor. Vestibulum ullamcorper non velit sit amet faucibus. Mauris ut ultrices ex, quis egestas odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras tristique efficitur tellus nec eleifend.' },
+   ]
+	 
+	 
+	 
+	 function renderArticle(articles) {
+		 
+		 title = articles.title
+		 content = articles.content
+		 
+		 var div = document.createElement('div')
+		 var h1 = document.createElement('h1')
+		 var p = document.createElement('p')
+		
+		 div.appendChild(h1)
+		 div.appendChild(p)
+		 
+		 h1.appendChild(document.createTextNode(title))
+		 p.appendChild(document.createTextNode(content))
+		 
+		 return div
+	 }
+	 
+	 
+	 function renderAll(articles) {
+		 for (var i = 0; i < articles.length; i++) {
+		 	document.body.appendChild(renderArticle(articles[i]))
+		 }
+	}
+	 renderAll(articles)
+	 
+ </script>
+</body>
+
+</html>

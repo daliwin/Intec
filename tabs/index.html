@@ -20,8 +20,29 @@
 		</div>
 		
 		<script>
+			var activeContent = document.getElementById('contents').firstElementChild
 			
-		
+			function attachTabHandlers(tab, content) {
+				content.style.display = 'none'
+				tab.addEventListener('click', function() {
+					activeContent.style.display = 'none'
+					content.style.display = 'block'
+					activeContent = content
+					})
+				}
+
+			function loopOverTabs() {
+				var tabs = document.getElementById('tabs').children
+				var contents = document.getElementById('contents').children
+				for (var i = 0; i < tabs.length; i++) {
+					var tab = tabs.children[i]
+					var content = contents.children[i]
+					attachTabHandlers(tab, content)
+					}
+				contents[0].style.display = 'block'
+			}
+			loopOverTabs()
+
 		</script>
 
 	</body>

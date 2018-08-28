@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Button</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+	</head>
+
+	<body>
+		<button id="btn">Click me!!</button>
+		
+		<script>
+			var btn = document.getElementById('btn')
+			
+			function changePosition() {
+				var num = Math.random() * 200
+				var num2 = Math.random() * 200
+				//console.log(num)
+				btn.style.marginTop = num + 'px'
+				btn.style.marginLeft = num2 + 'px'
+			}
+			
+			
+			
+			btn.addEventListener('mouseover', changePosition)
+			btn.addEventListener('click', function () {
+				alert('You Win')
+			})
+		</script>
+	</body>
+</html>
