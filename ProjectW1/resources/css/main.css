@@ -1,18 +1,19 @@
 .container {
     position: relative;
-    max-width: 100%
-}
-
-#hero { 
     max-width: 100%;
 }
 
-#app-4 {
-
+#hero { 
+    width: 100%;
 }
 
-img {
-    max-width: 500px;
+#app-4 {
+    text-align: center;
+    font-family: Lato;
+}
+
+#image {
+    width: 800px;
 }
 
 .hero-text {
@@ -26,14 +27,3 @@ img {
     text-align: center;
     font-size: 45px;   
 }
-
-p {
-	display: flex;
-	justify-content: flex-end;
-	align-items: flex-end;
-}
-
-h4 {
-    font-family: Lato;
-}
-

@@ -1,34 +1,35 @@
-function renderShark(shark) {
+function renderShark(shark, nb) {
     title = shark.NAME
     attack = shark.ATTACKS
     fatalities = shark.FATALITIES
     image = shark.IMAGE
-    console.log(image)
-    
 
-    var li = document.createElement('li')
+    var div = document.createElement('div')
     var h1 = document.createElement('h1')
     var h4 = document.createElement('h4')
     var h5 = document.createElement('h4')
     var img = document.createElement('img')
+    
     img.setAttribute('src', image)
+    img.setAttribute('id', 'image')
 
-    li.appendChild(h1)
-    li.appendChild(img)
-    li.appendChild(h4)
-    li.appendChild(h5)
+    div.appendChild(h1)
+    div.appendChild(img)
+    div.appendChild(h4)
+    div.appendChild(h5)
 
-    h1.appendChild(document.createTextNode(title))
-    img.appendChild(document.createTextNode(image))
+    h1.appendChild(document.createTextNode(nb + '. ' + title))
     h4.appendChild(document.createTextNode('Attacks: ' + attack))
     h5.appendChild(document.createTextNode('Fatalities: ' + fatalities))
 
-    return li
+    return div
 }
 
 function renderSharks(sharkData) {
+    var nb = sharkData.length
     for (var i = 0; i < sharkData.length; i++) {
-        document.getElementById('s-list').appendChild(renderShark(sharkData[i]))
+        document.getElementById('app-4').appendChild(renderShark(sharkData[i], nb))
+        nb--
     }
 }
 
