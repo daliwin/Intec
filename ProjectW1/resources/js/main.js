@@ -5,23 +5,24 @@ function renderShark(shark) {
 	
 	var div = document.createElement('div')
 	var h1 = document.createElement('h1')
-	var p = document.createElement('p')
-	var br = document.createElement('br')
+	var h4 = document.createElement('h4')
 	
 	div.appendChild(h1)
-	div.appendChild(p)
+	div.appendChild(h4)
 	
 	h1.appendChild(document.createTextNode(title))
-	p.appendChild(document.createTextNode('Attacks: ' + attack))
-	p.appendChild(document.createTextNode('Fatalities: ' + fatalities))
+	h4.appendChild(document.createTextNode('Attacks: ' + attack))
+	h4.appendChild(document.createTextNode('Fatalities: ' + fatalities))
 	
 	return div
 }
 
 function renderSharks(sharkData) {
+	var div = document.createElement('div')
 	for (var i = 0; i < sharkData.length; i++) {
 				document.getElementById('app-4').appendChild(renderShark(sharkData[i]))
 			}
+	return div
 }
 
 function init() {
