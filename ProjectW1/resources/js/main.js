@@ -1,8 +1,8 @@
 function renderShark(shark, nb) {
-    title = shark.NAME
-    attack = shark.ATTACKS
-    fatalities = shark.FATALITIES
-    image = shark.IMAGE
+    var title = shark.NAME
+    var attack = shark.ATTACKS
+    var fatalities = shark.FATALITIES
+    var image = shark.IMAGE
 
     var div = document.createElement('div')
     var h1 = document.createElement('h1')
