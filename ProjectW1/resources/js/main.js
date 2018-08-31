@@ -26,11 +26,13 @@ function renderShark(shark, nb) {
 }
 
 function renderSharks(sharkData) {
+	var div = document.createElement('div')
     var nb = sharkData.length
     for (var i = 0; i < sharkData.length; i++) {
         document.getElementById('app-4').appendChild(renderShark(sharkData[i], nb))
         nb--
     }
+	return div
 }
 
 function init() {
@@ -43,7 +45,7 @@ function init() {
             console.debug(tabletopData)
             elem.style.display = 'block'
 
-            renderSharks(tabletopData)
+            document.appendChild(renderSharks(tabletopData))
         },
         simpleSheet: true
     })
