@@ -1,8 +1,8 @@
 function renderShark(shark, nb) {
-    var title = shark.NAME
+    var sharkName = shark.NAME
     var attack = shark.ATTACKS
     var fatalities = shark.FATALITIES
-    var image = shark.IMAGE
+    var sharkImage = shark.IMAGE
 
     var div = document.createElement('div')
     var h1 = document.createElement('h1')
@@ -10,7 +10,7 @@ function renderShark(shark, nb) {
     var h5 = document.createElement('h4')
     var img = document.createElement('img')
     
-    img.setAttribute('src', image)
+    img.setAttribute('src', sharkImage)
     img.setAttribute('id', 'image')
 
     div.appendChild(h1)
@@ -18,7 +18,7 @@ function renderShark(shark, nb) {
     div.appendChild(h4)
     div.appendChild(h5)
 
-    h1.appendChild(document.createTextNode(nb + '. ' + title))
+    h1.appendChild(document.createTextNode(nb + '. ' + sharkName))
     h4.appendChild(document.createTextNode('Attacks: ' + attack))
     h5.appendChild(document.createTextNode('Fatalities: ' + fatalities))
 
