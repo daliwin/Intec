@@ -14,16 +14,16 @@ function renderArticle(article) {
     return crel('div', {
             class: 'pure-g'
         },
-        crel('div', {class: 'pure-u-1 pure-u-md-1-3'},
+        crel('div', {class: 'pure-u-1-3'},
             crel('h1', article.NAME),
             crel('img', {
                 id: 'image',
                 src: article.IMAGE
             })),
-        crel('div', {id: 'test', class: 'pure-u-1 pure-u-md-1-3'},
+        crel('div', {class: 'pure-u-1-3'},
             crel('h4', 'Attacks: ', article.ATTACKS),
             crel('h4', 'Deaths: ', article.FATALITIES)),
-        crel('div', {class: 'pure-u-1 pure-u-md-1-3'},
+        crel('div', {class: 'pure-u-1-3'},
             crel('p', article.INFO))
     )
 }
