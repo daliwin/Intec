@@ -1,6 +1,6 @@
 body {
 	margin: 0px;
-	font-family: Lato;
+	font-family: sans-serif;
 }
 
 .hero {
@@ -25,9 +25,11 @@ body {
 
 #app-4 {
     text-align: center;
-    font-family: Lato;
+    font-family: sans-serif;
 }
 
 #image {
     width: 800px;
+	height: auto;
 }
+

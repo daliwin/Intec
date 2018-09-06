@@ -13,7 +13,9 @@ module.exports = {
 
 	plugins: [
     // Generates default index.html
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+		title: 'Deadliest Sharks',
+	})
   ],
 
 	module: {
