@@ -6,7 +6,8 @@
 	"author": "Bryan Loyson <loysonbryan@hotmail.com>",
 	"license": "MIT",
 	"dependencies": {
-		"crel": "^3.1.0"
+		"crel": "^3.1.0",
+		"tabletop": "^1.5.2"
 	},
 	"devDependencies": {
 		"css-loader": "^1.0.0",
