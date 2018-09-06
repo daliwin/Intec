@@ -1,13 +1,13 @@
-console.log('ok')
+var tabletop = require('tabletop')
 
-crel = require('crel')
-
-var page = crel('div',
-			   crel('h1', 'Title'),
-			   crel('p', 'some text'))
-
-document.body.appendChild(page)
-
+tabletop.init({
+	key: 'https://docs.google.com/spreadsheets/d/13EyQnXAngwysDCYHoEow8XwXMAaPHhkvcEMZZBxWEBs/pubhtml',
+	callback: function (tabletopData, tabletop) {
+		//document.body.appendChild(tabletopData)
+		console.log(tabletopData)
+	},
+	simpleSheet: true
+})
 
 //function renderShark(shark, nb) {
 //    var sharkName = shark.NAME
@@ -20,7 +20,7 @@ document.body.appendChild(page)
 //    var h4 = document.createElement('h4')
 //    var h5 = document.createElement('h4')
 //    var img = document.createElement('img')
-//    
+//
 //    img.setAttribute('src', sharkImage)
 //    img.setAttribute('id', 'image')
 //
