@@ -1,10 +1,11 @@
+var render = require('./render')
 var tabletop = require('tabletop')
 
 tabletop.init({
 	key: 'https://docs.google.com/spreadsheets/d/13EyQnXAngwysDCYHoEow8XwXMAaPHhkvcEMZZBxWEBs/pubhtml',
 	callback: function (tabletopData, tabletop) {
-		//document.body.appendChild(tabletopData)
 		console.log(tabletopData)
+		document.body.appendChild(render(tabletopData))
 	},
 	simpleSheet: true
 })
