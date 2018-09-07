@@ -5,7 +5,7 @@ tabletop.init({
 	key: 'https://docs.google.com/spreadsheets/d/13EyQnXAngwysDCYHoEow8XwXMAaPHhkvcEMZZBxWEBs/pubhtml',
 	callback: function (tabletopData, tabletop) {
 		console.log(tabletopData)
-		document.body.appendChild(render(tabletopData))
+		render(tabletopData)
 	},
 	simpleSheet: true
 })

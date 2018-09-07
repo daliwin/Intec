@@ -10,24 +10,53 @@ function renderHeader() {
 }
 
 function renderArticle(article) {
+
 	var component = crel('div')
 	var button = crel('button', {class: 'pure-button pure-button-primary'}, 'More info')
 	
 	button.addEventListener('click', function () {
-        var content = crel('p', article.INFO)
-        component.removeChild(button)
-        component.appendChild(content)
-      })
-	
-	return crel('div', {class: 'pure-u-1 pure-u-md-1-3'},
-				component,
+	var content = crel('p', {class: 'content'}, article.INFO)
+		
+		component.removeChild(button)
+		component.appendChild(content)
+	})
+
+	return crel(component, {class: 'pure-u-1 pure-u-md-1-3'},
 			crel('h1', article.NAME),
 			crel('img', {class: 'pure-img', src: article.IMAGE}),
 			crel('h4', 'Attacks: ', article.ATTACKS),
 			crel('h4', 'Deaths: ', article.FATALITIES),
 				button)
-//			crel('p', article.INFO))
+			//crel('p', {class: 'button1'}, article.INFO))
 }
+
+function renderArticles(articles) {
+	return articles.map(renderArticle)
+}
+
+function renderPage(articles) {
+	return crel(document.body,
+		crel('section', {
+			class: 'hero'
+		}, renderHeader()),
+
+		crel('div', {
+			class: 'pure-g sharks'
+		}, renderArticles(articles)))
+	
+}
+
+module.exports = renderPage
+
+
+
+
+
+
+
+
+
+
 
 
 //function renderArticle(article) {
@@ -53,24 +82,3 @@ function renderArticle(article) {
 //			crel('p', article.INFO))
 //	)
 //}
-
-
-function renderArticles(articles) {
-	return articles.map(renderArticle)
-}
-
-function renderPage(articles) {
-	return crel(document.body,
-		crel('section', {
-			class: 'hero'
-		}, renderHeader()),
-		//        crel('div', {
-		//                class: 'section group'
-		//            },
-		crel('div', {
-			class: 'pure-g sharks'
-		}, renderArticles(articles))
-	)
-}
-
-module.exports = renderPage
