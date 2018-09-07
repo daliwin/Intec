@@ -1,38 +1,74 @@
 body {
-    margin: 0px;
-    font-family: Lato;
+	margin: 0px;
+	font-family: Lato;
 }
 
 .hero {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(http://navigateworks.com/wp-content/uploads/2017/07/jaws.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(http://navigateworks.com/wp-content/uploads/2017/07/jaws.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 .hero h1 {
-    font-size: 5em;
+	font-size: 5em;
 }
 
 #app-4 {
-    text-align: center;
-    font-family: Lato;
+	text-align: center;
+	font-family: Lato;
 }
 
+/*
 #image {
-    width: 500px;
-    height: auto;
-    background-size: cover;
-    background-size: 100%;
-    overflow-x: hidden;
-    position: relative;
+	width: 300px;
+	height: auto;
+	background-size: cover;
+	background-size: 100%;
+	overflow-x: hidden;
+	position: relative;
 }
+*/
+
+.sharks {
+	text-align: center;
+}
+
+/*
+h4 {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+*/
+
+/*
+p {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	max-width: 600px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+*/
+
+.sharks img {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	height: 250px;
+	width: 400px;
+
+}
+
